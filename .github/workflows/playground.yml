@@ -307,7 +307,7 @@ jobs:
           cargo install flutter_rust_bridge_codegen --version ${{ env.FLUTTER_RUST_BRIDGE_VERSION }} --features "uuid" --locked
           sed -i 's/uni_links_desktop/#uni_links_desktop/g' flutter/pubspec.yaml
           pushd flutter/lib;  find . | grep dart | xargs sed -i 's/textScaler: TextScaler.linear(\(.*\)),/textScaleFactor: \1,/g'; popd;
-          pushd flutter ; flutter pub get ; popd
+          pushd flutter ; flutter --disable-telemetry pub get ; popd
           ~/.cargo/bin/flutter_rust_bridge_codegen --rust-input ./src/flutter_ffi.rs --dart-output ./flutter/lib/generated_bridge.dart
 
       - uses: nttld/setup-ndk@v1
