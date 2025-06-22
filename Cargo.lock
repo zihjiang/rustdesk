@@ -5684,7 +5684,7 @@ dependencies = [
 [[package]]
 name = "reqwest"
 version = "0.11.23"
-source = "git+https://github.com/rustdesk-org/reqwest#9cb758c9fb2f4edc62eb790acfd45a6a3da21ed3"
+source = "git+https://github.com/rustdesk-org/reqwest#32db1b0b05c4991ee34a65f08338755c4434f54e"
 dependencies = [
  "async-compression",
  "base64 0.21.7",
